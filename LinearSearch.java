@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class LinearSearch {
-
+	
 	public static int search(int arr[],int x) {
 		for(int i = 0;i<arr.length;i++) {
 			if(arr[i] == x) {
@@ -18,13 +18,15 @@ public class LinearSearch {
 		System.out.println("Enter the size of the array:");
 		int z = scn.nextInt(); // Size of the array
 		int arr[] = new int[z];
+		// Input of the array
 		for (int i = 0; i < z; i++) {
 			int element = scn.nextInt();
 			arr[i] = element;
 		}
+		//Prints the array
 		System.out.println("Your input array is :" + Arrays.toString(arr));
 		System.out.println("Enter the element to find:");
-		int x = scn.nextInt();
+		int x = scn.nextInt(); //element to find
 		int idx = search(arr,x);
 		if(idx == -1) {
 			System.out.println("Element not found!");
